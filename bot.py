@@ -19,6 +19,6 @@ async def remind(ctx):
 async def cpu(ctx):
   r = requests.get("http://localhost:8000/cpu")
   print(r.text)
-  await ctx.channel.send("task manager stats")
+  await ctx.channel.send("task manager stats: " + r.text)
   
 bot.run(TOKEN)
